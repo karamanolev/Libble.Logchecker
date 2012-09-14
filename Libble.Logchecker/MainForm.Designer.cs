@@ -28,34 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.labelScore = new System.Windows.Forms.Label();
+            this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textGood = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBad = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // labelScore
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Score: 98";
+            this.labelScore.AutoSize = true;
+            this.labelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.Location = new System.Drawing.Point(6, 16);
+            this.labelScore.Name = "labelScore";
+            this.labelScore.Size = new System.Drawing.Size(151, 24);
+            this.labelScore.TabIndex = 0;
+            this.labelScore.Text = "Score: no log file";
             // 
-            // webBrowser1
+            // webBrowser
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(398, 27);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(613, 725);
-            this.webBrowser1.TabIndex = 1;
+            this.webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowser.Location = new System.Drawing.Point(398, 27);
+            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.Size = new System.Drawing.Size(613, 725);
+            this.webBrowser.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -80,7 +89,7 @@
             // 
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.btnOpen.Size = new System.Drawing.Size(152, 22);
+            this.btnOpen.Size = new System.Drawing.Size(146, 22);
             this.btnOpen.Text = "&Open";
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
@@ -93,29 +102,85 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.labelScore);
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(380, 725);
+            this.groupBox1.Size = new System.Drawing.Size(380, 46);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textGood);
+            this.groupBox2.Location = new System.Drawing.Point(12, 79);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(380, 305);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Good";
+            // 
+            // textGood
+            // 
+            this.textGood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textGood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textGood.ForeColor = System.Drawing.Color.Green;
+            this.textGood.Location = new System.Drawing.Point(6, 19);
+            this.textGood.Multiline = true;
+            this.textGood.Name = "textGood";
+            this.textGood.Size = new System.Drawing.Size(368, 280);
+            this.textGood.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBad);
+            this.groupBox3.Location = new System.Drawing.Point(12, 390);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(380, 362);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Bad";
+            // 
+            // textBad
+            // 
+            this.textBad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.textBad.Location = new System.Drawing.Point(6, 19);
+            this.textBad.Multiline = true;
+            this.textBad.Name = "textBad";
+            this.textBad.Size = new System.Drawing.Size(368, 337);
+            this.textBad.TabIndex = 0;
+            // 
             // MainForm
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 764);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Logchecker";
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,13 +188,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label labelScore;
+        private System.Windows.Forms.WebBrowser webBrowser;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnOpen;
         private System.Windows.Forms.ToolStripMenuItem btnAbout;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textGood;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBad;
     }
 }
 
