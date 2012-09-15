@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Logchecker.Properties {
+namespace Libble.Logchecker.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

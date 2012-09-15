@@ -42,7 +42,21 @@ namespace Libble.Logchecker
                 MessageBox.Show("Error reading log: " + e.Message);
                 return;
             }
-            LogcheckerWrapper logchecker = new LogcheckerWrapper(text);
+            LogcheckerWrapper logchecker;
+            try
+            {
+                logchecker = new LogcheckerWrapper(text);
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("php4ts"))
+                {
+                    MessageBox.Show("Couldn't load php4ts.dll. Are you missing VS2010 redistributable? Download it here http://www.microsoft.com/en-us/download/details.aspx?id=26999");
+                    return;
+                }
+                throw e;
+            }
+
             this.labelScore.Text = "Score: " + logchecker.Score;
             webBrowser.DocumentText = this.FormatHtml(logchecker.Log);
 

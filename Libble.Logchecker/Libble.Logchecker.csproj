@@ -7,7 +7,7 @@
     <ProjectGuid>{54DBFF4C-AF48-4F24-BD4F-C9D4C2D25C43}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Logchecker</RootNamespace>
+    <RootNamespace>Libble.Logchecker</RootNamespace>
     <AssemblyName>Libble.Logchecker</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

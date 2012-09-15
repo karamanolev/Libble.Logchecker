@@ -37,7 +37,20 @@ namespace LogcheckerCli
                 return;
             }
 
-            LogcheckerWrapper logchecker = new LogcheckerWrapper(log);
+            LogcheckerWrapper logchecker;
+            try
+            {
+                logchecker = new LogcheckerWrapper(log);
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("php4ts"))
+                {
+                    Console.WriteLine("Couldn't load php4ts.dll. Are you missing VS2010 redistributable? Download it here http://www.microsoft.com/en-us/download/details.aspx?id=26999");
+                    return;
+                }
+                throw e;
+            }
 
             Console.WriteLine("Score: " + logchecker.Score);
             Console.WriteLine("Good:");
