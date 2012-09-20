@@ -60,15 +60,6 @@ namespace Libble.Logchecker
             this.labelScore.Text = "Score: " + logchecker.Score;
             webBrowser.DocumentText = this.FormatHtml(logchecker.Log);
 
-            if (logchecker.Good.Length == 0)
-            {
-                this.textGood.Text = "- None";
-            }
-            else
-            {
-                this.textGood.Text = string.Join(Environment.NewLine, logchecker.Good.Select(s => "- " + s));
-            }
-
             if (logchecker.Bad.Length == 0)
             {
                 this.textBad.Text = "- None";
@@ -115,8 +106,16 @@ body {
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 if (files.Length > 0)
                 {
-
+                    this.ReadLog(files[0]);
                 }
+            }
+        }
+
+        private void MainForm_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.All;
             }
         }
     }

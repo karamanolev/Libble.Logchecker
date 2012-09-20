@@ -53,16 +53,7 @@ namespace LogcheckerCli
             }
 
             Console.WriteLine("Score: " + logchecker.Score);
-            Console.WriteLine("Good:");
-            if (logchecker.Good.Length == 0)
-            {
-                Console.WriteLine("- None");
-            }
-            else
-            {
-                Console.WriteLine(string.Join(Environment.NewLine, logchecker.Good.Select(s => "- " + s)));
-            }
-            Console.WriteLine("Bad:");
+            Console.WriteLine("Report:");
             if (logchecker.Bad.Length == 0)
             {
                 Console.WriteLine("- None");

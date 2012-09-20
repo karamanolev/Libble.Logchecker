@@ -35,13 +35,10 @@
             this.btnOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textGood = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBad = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,38 +109,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textGood);
-            this.groupBox2.Location = new System.Drawing.Point(12, 79);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(380, 305);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Good";
-            // 
-            // textGood
-            // 
-            this.textGood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textGood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textGood.ForeColor = System.Drawing.Color.Green;
-            this.textGood.Location = new System.Drawing.Point(6, 19);
-            this.textGood.Multiline = true;
-            this.textGood.Name = "textGood";
-            this.textGood.Size = new System.Drawing.Size(368, 280);
-            this.textGood.TabIndex = 0;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBad);
-            this.groupBox3.Location = new System.Drawing.Point(12, 390);
+            this.groupBox3.Location = new System.Drawing.Point(12, 79);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(380, 362);
+            this.groupBox3.Size = new System.Drawing.Size(380, 673);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Bad";
+            this.groupBox3.Text = "Report";
             // 
             // textBad
             // 
@@ -155,7 +129,7 @@
             this.textBad.Location = new System.Drawing.Point(6, 19);
             this.textBad.Multiline = true;
             this.textBad.Name = "textBad";
-            this.textBad.Size = new System.Drawing.Size(368, 337);
+            this.textBad.Size = new System.Drawing.Size(368, 648);
             this.textBad.TabIndex = 0;
             // 
             // MainForm
@@ -165,7 +139,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 764);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.menuStrip1);
@@ -173,12 +146,11 @@
             this.Name = "MainForm";
             this.Text = "Logchecker";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -195,8 +167,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnOpen;
         private System.Windows.Forms.ToolStripMenuItem btnAbout;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textGood;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBad;
     }
